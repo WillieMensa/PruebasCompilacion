@@ -24,6 +24,6 @@
 	</platform>
 	<platform name="winphone">
 	</platform>
-	<icon src="willie.ico" />
+	<icon src="icon.png" />
 
 </widget>
