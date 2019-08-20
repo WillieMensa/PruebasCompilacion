@@ -1,0 +1,243 @@
+﻿<html>
+<head>
+
+	<!-- Viewport meta tag is critical to have mobile browsers actually report correct screen dimensions -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<title>Pentominos Puzzle en desarrollo</title>
+	<!--
+
+	-->
+	<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
+	<meta name="description" content="Investigando Pentominos Puzzle">
+	<meta charset="ISO-8859-1">
+	<link href="willie.ico"  rel="shortcut icon" >
+	<style>
+		body {
+			margin: 1px;
+			padding: 1px;
+		}
+		#newButton, #demoButton {
+			background: transparent;
+			border: 0;
+		}
+		#hintsButton, #newButton, #resetButton, #demoButton {
+			background: #ddeeff;
+			width: 120px;
+			padding: 5px;
+			display: block;
+			margin-top: 5px;
+		}
+		select {
+			background: #ddeeff;
+			border-radius: 10px;
+			font-size: 16px;
+			text-align: right;
+			padding: 4px 4px;
+			color: #222244;
+			width: 120px;
+		}
+		#checkboxtext, input, select {
+			font:  15px arial;
+			visibility: hidden;
+		}
+		#startButton {
+			width: 100px;
+			padding: 5px;
+			display: block;
+			margin-top: 5px;
+			font:  20px arial;
+		}
+		#giraPieza, #volteaPieza {
+			width: 100px;
+			padding: 0px;
+			display: block;
+			margin-top: 5px;
+			font:  28px arial bold ;
+		}
+		#containedor {
+			background: #9988ff;
+			border: 2;
+		}
+
+		input {
+			background: #ddeeff;
+			border-radius: 10px;
+			font-size: 16px;
+			text-align: center;
+			padding: 4px 4px;
+			color: #222244;
+			width: 100px;
+	}
+
+
+
+	</style>
+
+	<!-- utilizo la version extendida de kinetics.js para tratar de entender el funcionamiento -->
+	<script src="e:\Dropbox\GitHub\LibreriasVarias\Kinetic-v4.4.3\kinetic-v4.4.3.min.js"></script>
+
+
+	<script src="animate.js"></script>
+
+	<script src="polyDemo.js"></script>
+
+
+	<!-- el script que sigue está basado en pentomino.puzzle.js del original -->
+	<script src="pentomino-puzzle-11.js"></script>
+
+	<!--
+	<script src="wpentomino.puzzle.js"></script>
+	<script src="wfunciones.js"></script>
+	 -->
+	<script src="polySolution.js"></script>
+	<script src="polyomino5.js"></script>
+	<script src="polyomino4.js"></script>
+
+
+</head>
+
+<!-- <body onload="init()"> -->
+<body >
+
+
+<div id="container" ></div>
+
+<div id="level">
+	<select id="levelButton" onchange="levelButton(this.value);">
+		<option value="1">Problema 1</option>
+		<option value="2">Problema 2</option>
+		<option value="3">Problema 3</option>
+		<option value="4">Problema 4</option>
+		<option value="5">Problema 5</option>
+		<option value="6">Problema 6</option>
+		<option value="7">Problema 7</option>
+		<option value="8">Problema 8</option>
+		<option value="9">Problema 9</option>
+		<option value="10">Problema 10</option>
+		<option value="11">Problema 11</option>
+		<option value="12">Problema 12</option>
+		<option value="13">Problema 13</option>
+		<option value="14">Problema 14</option>
+		<option value="15">Problema 15</option>
+		<option value="16">Problema 16</option>
+		<option value="17">Problema 17</option>
+		<option value="18">Problema 18</option>
+		<option value="19">Problema 19</option>
+		<option value="20">Problema 20</option>
+		<option value="21">Problema 21</option>
+		<option value="22">Problema 22</option>
+		<option value="23">Problema 23</option>
+		<option value="24">Problema 24</option>
+		<option value="25">Problema 25</option>
+		<option value="26">Problema 26</option>
+		<option value="27">Problema 27</option>
+		<option value="28">Problema 28</option>
+		<option value="29">Problema 29</option>
+		<option value="30">Problema 30</option>
+		<option value="31">Problema 31</option>
+		<option value="32">Problema 32</option>
+		<option value="33">Problema 33</option>
+		<option value="34">Problema 34</option>
+		<option value="35">Problema 35</option>
+		<option value="36">Problema 36</option>
+		<option value="37">Problema 37</option>
+		<option value="38">Problema 38</option>
+		<option value="39">Problema 39</option>
+		<option value="40">Problema 40</option>
+		<option value="41">Problema 41</option>
+		<option value="42">Problema 42</option>
+		<option value="43">Problema 43</option>
+		<option value="44">Problema 44</option>
+		<option value="45">Problema 45</option>
+		<option value="46">Problema 46</option>
+		<option value="47">Problema 47</option>
+		<option value="48">Problema 48</option>
+		<option value="49">Problema 49</option>
+		<option value="50">Problema 50</option>
+		<option value="51">Problema 51</option>
+		<option value="52">Problema 52</option>
+		<option value="53">Problema 53</option>
+		<option value="54">Problema 54</option>
+		<option value="55">Problema 55</option>
+		<option value="56">Problema 56</option>
+		<option value="57">Problema 57</option>
+		<option value="58">Problema 58</option>
+		<option value="59">Problema 59</option>
+		<option value="60">Problema 60</option>
+		<option value="61">Problema 61</option>
+		<option value="62">Problema 62</option>
+		<option value="63">Problema 63</option>
+		<option value="64">Problema 64</option>
+		<option value="65">Problema 65</option>
+		<option value="66">Problema 66</option>
+		<option value="67">Problema 67</option>
+		<option value="68">Problema 68</option>
+		<option value="69">Problema 69</option>
+		<option value="70">Problema 70</option>
+		<option value="71">Problema 71</option>
+		<option value="72">Problema 72</option>
+		<option value="73">Problema 73</option>
+		<option value="74">Problema 74</option>
+		<option value="75">Problema 75</option>
+		<option value="76">Problema 76</option>
+		<option value="77">Problema 77</option>
+		<option value="78">Problema 78</option>
+		<option value="79">Problema 79</option>
+		<option value="80">Problema 80</option>
+		<option value="81">Problema 81</option>
+		<option value="82">Problema 82</option>
+		<option value="83">Problema 83</option>
+		<option value="84">Problema 84</option>
+		<option value="85">Problema 85</option>
+		<option value="86">Problema 86</option>
+		<option value="87">Problema 87</option>
+		<option value="88">Problema 88</option>
+		<option value="89">Problema 89</option>
+		<option value="90">Problema 90</option>
+		<option value="91">Problema 91</option>
+		<option value="92">Problema 92</option>
+		<option value="93">Problema 93</option>
+		<option value="94">Problema 94</option>
+		<option value="95">Problema 95</option>
+		<option value="96">Problema 96</option>
+		<option value="97">Problema 97</option>
+		<option value="98">Problema 98</option>
+		<option value="99">Problema 99</option>
+		<option value="100">Problema 100</option>
+		<option value="101">Problema 101</option>
+		<option value="102">Problema 102</option>
+		<option value="103">Problema 103</option>
+
+	</select>
+</div>
+
+	<!-- <div id="problema"></div> -->
+	<!-- <div id="seleccion"><input type="button" id="selectButton" onclick="myFunction();" value="Vamos"></div> -->
+
+<!-- 
+<div id="numero">
+	<form action="#">
+		<p>Problema: <input type="number" id="myNumber" name="myNumber" value="12"  min="1" max="103" >		
+		<input type="submit" value="Ir">
+	</form>
+</div>
+ -->
+
+
+<div id="hints"><input type="button" id="hintsButton" onclick="hintsButton();" value="Ayudita"></div> 
+
+<div id="reset"><input type="button" id="resetButton" onclick="resetButton();" value="Reinicia"></div>
+
+<!-- experimento boton para girar -->
+<div id="giro"><input type="button" id="giraPieza" onclick="giraPieza();" value="&#X21BB;"></div>
+<div id="voltea"><input type="button" id="volteaPieza" onclick="volteaPieza();" value="&#X2194;"></div>
+
+<div id="check"><input type="checkbox" id="checkButton" onclick="checkButton(this.checked);">
+	<span id="checkboxtext">Verifica Soluci&oacute;n</span>
+</div>
+<div id="start"><input type="button" id="startButton" onclick="startButton(1);" value="Play"></div>
+<div id="new"><input type="button" id="newButton" onclick="createPuzzle(1, true);" value=""></div>
+<!-- <div id="demo"><input type="button" id="demoButton" onclick="demoButton(1);" value=""></div> -->
+</body>
+</html>
