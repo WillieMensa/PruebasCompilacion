@@ -18,7 +18,7 @@
 
 	<preference name="orientation" value="landscape" />
 
-	<platform name="ios">
+	<platform name="android">
 	</platform>
 	<icon src="icon.png" />
 
