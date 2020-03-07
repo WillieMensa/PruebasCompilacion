@@ -2,7 +2,7 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
 	id        = "ar.com.ingverger.pruebas_compilacion"
-    versionCode = "10"
+    versionCode = "110"
     version     = "1.1.0" >
 
 	<!-- versionCode is optional and Android only -->
@@ -15,8 +15,6 @@
 
 	<author href="http://www.ingverger.com.ar" email="ingverger@gmail.com">Willie Verger
 	</author>
-
-	<preference name="orientation" value="landscape" />
 
 	<platform name="android">
 	</platform>
