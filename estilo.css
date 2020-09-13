@@ -1,0 +1,239 @@
+/*
+	estilo.css
+	22/4/2019
+	22/7/2019 - version	0.6.5
+*/
+
+@font-face {
+		font-family: 'roboto-regular';
+		src: url('roboto-regular-webfont.woff2') format('woff2'),
+				 url('roboto-regular-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+}
+@font-face {
+		font-family: 'fredoka-one';
+		src: url('FredokaOne-Regular.woff2') format('woff2'),
+				url('FredokaOne-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+}
+
+@font-face {
+    font-family: 'bangersregular';
+    src: url('bangers-regular-webfont.woff2') format('woff2'),
+         url('bangers-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'luckiest_guyregular';
+    src: url('luckiestguy-regular-webfont.woff2') format('woff2'),
+         url('luckiestguy-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sriracharegular';
+    src: url('sriracha-regular-webfont.woff2') format('woff2'),
+         url('sriracha-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+		font-family: 'Carter One';
+		src: url('carter-one.woff2') format('woff2'),
+				 url('carter-one.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+}
+
+@font-face {
+		font-family: 'robotomedium';
+		src: url('roboto-medium-webfont.woff2') format('woff2'),
+				 url('roboto-medium-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+}
+
+
+/*
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+*/
+
+
+/*	screen size -400  */
+@media screen and (max-width:400px) {
+	body {
+		background-color: #666;
+		max-width: 400px;
+		max-height: 320px;
+		transform: scale(0.28,0.28);
+	}
+}
+
+/*
+	limites de pantalla
+	400 640	1024	-	1.6 // height max 
+	320 512  820
+*/	
+/*	screen size 400-640  */
+@media screen and (max-width:640px)  and (min-width:400px) {
+	body {
+		background-color: #060;
+		max-width: 600px;
+		max-height: 480px;
+		transform: scale(0.4,0.4);
+	}
+
+
+}
+
+
+/*	mid screen size 640-1024  */
+@media screen and (max-width:1024px)  and (min-width:640px) {
+	body {
+		background-color: #8d6;
+		max-width: 800px;
+		max-height: 640px;
+		transform: scale(0.64,0.64);
+	}
+}
+
+
+/*	max screen size 1024-  */
+@media screen and (min-width:1024px) {
+	body {
+		background-color: #68a;	
+		max-width: 1000px;
+		max-height: 600px;
+		transform: scale(1,1); /* Standard syntax */
+	}
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+h1 {
+    font-family: 'fredoka-one';
+	font-size: 48px;
+
+}
+
+h2 {
+	font-family: 'sriracharegular', cursive;
+	font-size: 24px;
+
+}
+
+p {
+	font-family: 'roboto-regular;
+	font-size: 12px;
+
+}
+
+.auxiliar { fill:gray; stroke:#444;stroke-width:1;opacity:0.8; }
+
+.logo {
+  float: left;
+  position: relative;
+  display: inline-block;
+}
+
+
+#levelButton {
+	margin-top: 20px;
+	width: 120px;
+	line-height: 80px;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 10 10px;
+	font-family: 'sriracharegular';
+	background: #892;
+	border: none;
+}
+
+
+/*
+#initButton, #demoButton {
+	background: #892;
+	border: none;
+	font-family: 'sriracharegular';
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 40px;
+	margin-top: 20px;
+	padding: 0 0px;
+	width: 120px;
+}
+
+*/
+
+/*
+#container {
+	background: #9988ff;
+	border: 20;
+}
+*/
+
+
+#giraPieza, #volteaPieza {
+	font:  28px sriracharegular bold ;
+}
+
+input, label, select, #nroProblema {
+	background: #669900;
+	border-radius: 8px;
+	border: none;
+	font-family: 'sriracharegular';
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 16px;
+	text-align: center;
+	margin-top: 10px;
+	padding: 0 0px;
+	width: 100px;
+	height: 36px;
+}
+
+#checkboxtext {
+	border: none;
+	font-family: 'sriracharegular';
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+}
+
+button {
+	background: #669900;
+	border-radius: 8px;
+	border: none;
+	font-family: 'sriracharegular';
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 16px;
+	margin-top: 10px;
+	padding: 0 0px;
+	width: 100px;
+	height: 36px;
+}
+
+button:hover {
+  background: #ad1;
+}
+
+.center {
+  margin: auto;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  align-self: center;
+}
